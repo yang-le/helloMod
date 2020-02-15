@@ -36,7 +36,11 @@ public class Hello {
                 new ItemGoldenEgg(),
                 new ItemGrassBlock(grass_block),
                 new ItemRedstonePickaxe(),
-                new ItemRedstoneApple()
+                new ItemRedstoneApple(),
+                new ItemRedstoneArmor.Helmet(),
+                new ItemRedstoneArmor.Chestplate(),
+                new ItemRedstoneArmor.Leggings(),
+                new ItemRedstoneArmor.Boots()
             );
         }
 

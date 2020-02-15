@@ -2,10 +2,15 @@ package yangle.hello.item;
 
 import java.util.function.Supplier;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 
 public class ItemTier implements IItemTier {
+   public static final ItemTier REDSTONE = new ItemTier(3, 16, 16.0F, 0.0F, 10, () -> {
+      return Ingredient.fromItems(Items.RED_SANDSTONE);
+   });
+
    private final int harvestLevel;
    private final int maxUses;
    private final float efficiency;

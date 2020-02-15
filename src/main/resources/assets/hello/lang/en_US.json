@@ -2,5 +2,9 @@
     "item.hello.golden_egg": "Golden Egg",
     "item.hello.redstone_pickaxe": "Redstone Pickaxe",
     "item.hello.redstone_apple": "Redstone Apple",
+    "item.hello.redstone_helmet": "Redstone Helmet",
+    "item.hello.redstone_chestplate": "Redstone Chestplate",
+    "item.hello.redstone_leggings": "Redstone Leggings",
+    "item.hello.redstone_boots": "Redstone Boots",
     "block.hello.grass_block": "Grass Block"
 }
