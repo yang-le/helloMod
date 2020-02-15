@@ -4,8 +4,9 @@ import net.minecraft.item.Item;
 
 public class ItemGoldenEgg extends Item
 {
-    public ItemGoldenEgg(Item.Properties properties)
+    public ItemGoldenEgg()
     {
-        super(properties);
+        super(new Item.Properties());
+        setRegistryName("golden_egg");
     }
 }
