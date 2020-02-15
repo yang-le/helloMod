@@ -35,7 +35,8 @@ public class Hello {
             event.getRegistry().registerAll(
                 new ItemGoldenEgg(),
                 new ItemGrassBlock(grass_block),
-                new ItemRedstonePickaxe()
+                new ItemRedstonePickaxe(),
+                new ItemRedstoneApple()
             );
         }
 

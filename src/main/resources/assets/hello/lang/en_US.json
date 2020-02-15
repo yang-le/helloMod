@@ -1,5 +1,6 @@
 {
     "item.hello.golden_egg": "Golden Egg",
     "item.hello.redstone_pickaxe": "Redstone Pickaxe",
+    "item.hello.redstone_apple": "Redstone Apple",
     "block.hello.grass_block": "Grass Block"
 }
