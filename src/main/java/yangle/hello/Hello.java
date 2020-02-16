@@ -41,16 +41,16 @@ public class Hello {
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event) {
             LOGGER.info("registerItems");
-            event.getRegistry().registerAll(new ItemGoldenEgg(), new ItemGrassBlock(grass_block),
-                    new ItemRedstonePickaxe(), new ItemRedstoneApple(), new ItemRedstoneArmor.Helmet(),
-                    new ItemRedstoneArmor.Chestplate(), new ItemRedstoneArmor.Leggings(),
-                    new ItemRedstoneArmor.Boots());
+            event.getRegistry().registerAll(new GoldenEggItem(), new GrassBlockItem(grass_block),
+                    new RedstonePickaxeItem(), new RedstoneAppleItem(), new RedstoneArmorItem.Helmet(),
+                    new RedstoneArmorItem.Chestplate(), new RedstoneArmorItem.Leggings(),
+                    new RedstoneArmorItem.Boots());
         }
 
         @SubscribeEvent
         public static void registerBlocks(RegistryEvent.Register<Block> event) {
             LOGGER.info("registerBlocks");
-            event.getRegistry().register(new BlockGrassBlock());
+            event.getRegistry().register(new GrassBlock());
         }
     }
 
