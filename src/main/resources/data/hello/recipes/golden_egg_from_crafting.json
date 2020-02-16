@@ -1,24 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
-    "pattern":
-    [
+    "pattern": [
         "xxx",
         "xax",
         "xxx"
     ],
-    "key":
-    {
-        "x":
-        {
+    "key": {
+        "x": {
             "item": "minecraft:gold_ingot"
         },
-        "a":
-        {
+        "a": {
             "item": "minecraft:egg"
         }
     },
-    "result":
-    {
+    "result": {
         "item": "hello:golden_egg",
         "count": 1
     }

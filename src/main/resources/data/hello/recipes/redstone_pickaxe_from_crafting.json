@@ -1,24 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
-    "pattern":
-    [
+    "pattern": [
         "xxx",
         " a ",
         " a "
     ],
-    "key":
-    {
-        "x":
-        {
+    "key": {
+        "x": {
             "item": "minecraft:redstone"
         },
-        "a":
-        {
+        "a": {
             "item": "minecraft:stick"
         }
     },
-    "result":
-    {
+    "result": {
         "item": "hello:redstone_pickaxe",
         "count": 1
     }

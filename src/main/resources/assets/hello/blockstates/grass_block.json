@@ -1,5 +1,7 @@
 {
     "variants": {
-        "": { "model": "hello:block/grass_block" }
+        "": {
+            "model": "hello:block/grass_block"
+        }
     }
 }

@@ -1,24 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
-    "pattern":
-    [
+    "pattern": [
         "xxx",
         "xax",
         "xxx"
     ],
-    "key":
-    {
-        "x":
-        {
+    "key": {
+        "x": {
             "item": "minecraft:redstone"
         },
-        "a":
-        {
+        "a": {
             "item": "minecraft:apple"
         }
     },
-    "result":
-    {
+    "result": {
         "item": "hello:redstone_apple",
         "count": 1
     }

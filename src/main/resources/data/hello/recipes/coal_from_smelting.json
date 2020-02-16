@@ -1,7 +1,6 @@
 {
     "type": "minecraft:smelting",
-    "ingredient":
-    {
+    "ingredient": {
         "item": "hello:grass_block"
     },
     "result": "minecraft:coal",

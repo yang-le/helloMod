@@ -1,0 +1,12 @@
+{
+    "test": {
+        "category": "player",
+        "subtitle": "hello.subtitle.test",
+        "sounds": [
+            {
+                "name": "hello:test",
+                "stream": true
+            }
+        ]
+    }
+}

@@ -4,13 +4,9 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemGroup;
 
-public class ItemRedstoneArmor extends ArmorItem
-{
-    public ItemRedstoneArmor(EquipmentSlotType slot)
-    {
-        super(ArmorMaterial.REDSTONE, slot, new Properties()
-            .group(ItemGroup.COMBAT)
-        );
+public class ItemRedstoneArmor extends ArmorItem {
+    public ItemRedstoneArmor(EquipmentSlotType slot) {
+        super(ArmorMaterial.REDSTONE, slot, new Properties().group(ItemGroup.COMBAT));
     }
 
     public static class Helmet extends ItemRedstoneArmor {

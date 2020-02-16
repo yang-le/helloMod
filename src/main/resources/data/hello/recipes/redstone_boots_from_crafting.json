@@ -1,20 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
-    "pattern":
-    [
+    "pattern": [
         "   ",
         "x x",
         "x x"
     ],
-    "key":
-    {
-        "x":
-        {
+    "key": {
+        "x": {
             "item": "minecraft:redstone"
         }
     },
-    "result":
-    {
+    "result": {
         "item": "hello:redstone_boots",
         "count": 1
     }

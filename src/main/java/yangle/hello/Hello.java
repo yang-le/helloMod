@@ -7,20 +7,28 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.registries.ObjectHolder;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.config.ModConfig;
 
 import yangle.hello.item.*;
 import yangle.hello.block.*;
 import yangle.hello.config.*;
+import yangle.hello.sound.SoundEvents;
 
 @Mod(Hello.MOD_ID)
 public class Hello {
+    private static final Logger LOGGER = LogManager.getLogger();
+
     static final String MOD_ID = "hello";
-    
+
     @ObjectHolder("hello:grass_block")
     public static final Block grass_block = null;
 
@@ -28,48 +36,57 @@ public class Hello {
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, HelloConfig.spec);
     }
 
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event) {
-            event.getRegistry().registerAll(
-                new ItemGoldenEgg(),
-                new ItemGrassBlock(grass_block),
-                new ItemRedstonePickaxe(),
-                new ItemRedstoneApple(),
-                new ItemRedstoneArmor.Helmet(),
-                new ItemRedstoneArmor.Chestplate(),
-                new ItemRedstoneArmor.Leggings(),
-                new ItemRedstoneArmor.Boots()
-            );
+            LOGGER.info("registerItems");
+            event.getRegistry().registerAll(new ItemGoldenEgg(), new ItemGrassBlock(grass_block),
+                    new ItemRedstonePickaxe(), new ItemRedstoneApple(), new ItemRedstoneArmor.Helmet(),
+                    new ItemRedstoneArmor.Chestplate(), new ItemRedstoneArmor.Leggings(),
+                    new ItemRedstoneArmor.Boots());
         }
 
         @SubscribeEvent
         public static void registerBlocks(RegistryEvent.Register<Block> event) {
+            LOGGER.info("registerBlocks");
             event.getRegistry().register(new BlockGrassBlock());
         }
     }
 
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class LifecycleEvents {
         @SubscribeEvent
-        public void commonSetup(final FMLCommonSetupEvent event) {
-            
+        public static void commonSetup(FMLCommonSetupEvent event) {
+            LOGGER.info("commonSetup");
         }
-    
-        @SubscribeEvent
-        public void clientSetup(final FMLClientSetupEvent event) {
 
-        }
-    
         @SubscribeEvent
-        public void interModEnqueue(final InterModEnqueueEvent event) {
-            
+        public static void clientSetup(FMLClientSetupEvent event) {
+            LOGGER.info("clientSetup");
         }
-    
+
         @SubscribeEvent
-        public void interModPorcess(final InterModProcessEvent event) {
-           
-        }        
+        public static void interModEnqueue(InterModEnqueueEvent event) {
+            LOGGER.info("interModEnqueue");
+        }
+
+        @SubscribeEvent
+        public static void interModPorcess(InterModProcessEvent event) {
+            LOGGER.info("interModPorcess");
+        }
+    }
+
+    @Mod.EventBusSubscriber
+    public static class PlayerEvents {
+        @SubscribeEvent
+        public static void onPlayerItemCrafted(PlayerEvent.ItemCraftedEvent event) {
+            event.getPlayer().playSound(SoundEvents.TEST, 1.0F, 1.0F);
+            // if (event.crafting.getItem() ==
+            // Item.getItemFromBlock(BlockLoader.grassBlock))
+            // {
+            // event.player.triggerAchievement(AchievementLoader.buildGrassBlock);
+            // }
+        }
     }
 }

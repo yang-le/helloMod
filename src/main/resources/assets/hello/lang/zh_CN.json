@@ -5,6 +5,7 @@
     "item.hello.redstone_helmet": "红石头盔",
     "item.hello.redstone_chestplate": "红石胸甲",
     "item.hello.redstone_leggings": "红石护腿",
-    "item.hello.redstone_boots": "红石靴子",    
-    "block.hello.grass_block": "草块"
+    "item.hello.redstone_boots": "红石靴子",
+    "block.hello.grass_block": "草块",
+    "hello.subtitle.test": "测试声音"
 }

@@ -14,26 +14,21 @@ public class HelloConfig {
 
         public General(ForgeConfigSpec.Builder builder) {
             builder.push("General");
-            ModEnabled = builder
-                    .comment("Enables/Disables the whole Mod [false/true|default:true]")
-                    .translation("enable.ocdtorcher.config")
-                    .define("enableMod", true);
-            TorchDistance = builder
-                    .comment("sets the Reach of the Torcher [0..50|default:20]")
-                    .translation("distance.ocdtorcher.config")
-                    .defineInRange("TorcherDistance", 20, 0,50);
+            ModEnabled = builder.comment("Enables/Disables the whole Mod [false/true|default:true]")
+                    .translation("enable.ocdtorcher.config").define("enableMod", true);
+            TorchDistance = builder.comment("sets the Reach of the Torcher [0..50|default:20]")
+                    .translation("distance.ocdtorcher.config").defineInRange("TorcherDistance", 20, 0, 50);
             builder.pop();
         }
     }
 
     public static class Section2 {
         public final ForgeConfigSpec.ConfigValue<Boolean> BoolVal2;
+
         public Section2(ForgeConfigSpec.Builder builder) {
             builder.push("section2");
-            BoolVal2 = builder
-                    .comment("Enables/Disables whatever [false/true|default:true]")
-                    .translation("enable.sec2.ocdtorcher.config")
-                    .define("ensec2", true);
+            BoolVal2 = builder.comment("Enables/Disables whatever [false/true|default:true]")
+                    .translation("enable.sec2.ocdtorcher.config").define("ensec2", true);
         }
     }
 }
