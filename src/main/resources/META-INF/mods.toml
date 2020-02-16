@@ -1,30 +1,35 @@
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
-    modLoader="javafml"
-    # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-    # Forge for 1.14.4 is version 28
-    loaderVersion="[31,)"
-    # If the mods defined in this file should show as seperate resource packs
-    showAsResourcePack=false
+modLoader="javafml"
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+# Forge for 1.14.4 is version 28
+loaderVersion="[31,)"
+# A URL to refer people to when problems occur with this mod
+issueTrackerURL="https://github.com/yang-le/helloMod/issues" #optional
+# If the mods defined in this file should show as seperate resource packs
+showAsResourcePack=false
 
-    [[mods]]
-      modId="hello"
-      version="1.0.0"
-      displayName="Hello Mod"
-      logoFile="logo.png"
-      authors="Yang Le"
-      description='''
-      This is a hello world example for minecraft mod.'''
+[[mods]]
+  modId="hello"
+  version="1.0.0"
+  displayName="Hello Mod"
+  updateJSONURL="https://raw.githubusercontent.com/yang-le/helloMod/master/releases.json"
+  displayURL="https://github.com/yang-le/helloMod"
+  logoFile="logo.png"
+  credits="吃饭遛弯小分队"
+  authors="Yang Le"
+  description='''
+  This is a hello world example for minecraft mod.'''
 
-      [[dependencies.hello]]
-        modId="forge"
-        mandatory=true
-        versionRange="[31,)"
-        ordering="NONE"
-        side="BOTH"
+  [[dependencies.hello]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
 
-      [[dependencies.hello]]
-        modId="minecraft"
-        mandatory=true
-        versionRange="[1.15.2]"
-        ordering="NONE"
-        side="BOTH"
+  [[dependencies.hello]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
