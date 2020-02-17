@@ -7,5 +7,6 @@
     "item.hello.redstone_leggings": "Redstone Leggings",
     "item.hello.redstone_boots": "Redstone Boots",
     "block.hello.grass_block": "Grass Block",
-    "hello.subtitle.test": "Test Sound"
+    "hello.subtitle.test": "Test Sound",
+    "death.attack.byPig": "%s was dead because of a pig!"
 }
